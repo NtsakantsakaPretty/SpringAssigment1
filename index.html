@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <script>
+        function displaySubjects() {
+            var selectedCourse = document.getElementById("course").value;
+            var output = document.getElementById("output");
+
+            switch (selectedCourse) {
+                case "FOUNDATION":
+                    output.innerHTML = "Elementary Computer Programming<br>" +
+                        "Introduction to Programming Concepts";
+                    break;
+                case "UNDERGRADUATE":
+                    output.innerHTML = "Operating System<br>" +
+                        "Object Oriented Programming<br>" +
+                        "Introduction to Computer Networks<br>" +
+                        "Software Engineering<br>" +
+                        "Computer Architecture Organisation";
+                    break;
+                case "HONOURS":
+                    output.innerHTML = "Distribution and Parallel Computing<br>" +
+                        "Advanced Java<br>" +
+                        "Intelligent Systems<br>" +
+                        "Computer Graphics";
+                    break;
+                default:
+                    output.innerHTML = "Please select a valid course";
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Course Selection</h1>
+<label for="course">Select your course:</label>
+<select id="course">
+    <option value="FOUNDATION">Foundation</option>
+    <option value="UNDERGRADUATE">Undergraduate</option>
+    <option value="HONOURS">Honours</option>
+</select>
+<button onclick="displaySubjects()">Submit</button>
+<div id="output"></div>
+</body>
+</html>
